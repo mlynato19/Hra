@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bite.jfif" />
+    <None Remove="library1.jpg" />
+    <None Remove="main.jpg" />
+    <None Remove="pub.jpg" />
+    <None Remove="SpringTrapScrappy.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="bite.jfif" />
+    <Resource Include="library1.jpg" />
+    <Resource Include="main.jpg" />
+    <Resource Include="pub.jpg" />
+    <Resource Include="SpringTrapScrappy.png" />
+  </ItemGroup>
+
+</Project>
