@@ -23,6 +23,7 @@ namespace Hra
     {
         public string texta;
         public List<Slova> jsonFromFile;
+        public int but;
         public Poloha1()
         {
             InitializeComponent();
@@ -38,30 +39,60 @@ namespace Hra
             background.ImageSource = new BitmapImage(new Uri(@"R:/videohra/photos/library1.jpg"));
             postavavpravo.Source = new BitmapImage(new Uri(@"R:/videohra/photos/SpringTrapScrappy.png"));
             mrtvola.Source = new BitmapImage(new Uri(@"R:/videohra/photos/bite.jfif"));
-            text.Text = jsonFromFile[0].Text;
+            textbox.Text = jsonFromFile[0].Text;
+
+            
+
+            hid();
+
+
 
         }
 
 
-
+        public void hid()
+        {
+            select.Visibility = System.Windows.Visibility.Hidden;
+            leftBut.Visibility = System.Windows.Visibility.Hidden;
+            rightBut.Visibility = System.Windows.Visibility.Hidden;
+            textbox.Visibility = System.Windows.Visibility.Visible;
+            dal.Visibility = System.Windows.Visibility.Visible;
+        }
+        public void show()
+        {
+            select.Visibility = System.Windows.Visibility.Visible;
+            leftBut.Visibility = System.Windows.Visibility.Visible;
+            rightBut.Visibility = System.Windows.Visibility.Visible;
+            textbox.Visibility = System.Windows.Visibility.Hidden;
+            textbox.Visibility = System.Windows.Visibility.Hidden;
+        }
 
 
         public int i = 0;
         private void dal_Click(object sender, RoutedEventArgs e)
         {
             i++;
+            
+
             if (i == 1)
             {
-                text.Text = jsonFromFile[1].Text;
+                textbox.Text = jsonFromFile[1].Text;
+                
+
             }
             else if (i == 2)
             {
-                text.Text = jsonFromFile[2].Text;
+                textbox.Text = jsonFromFile[2].Text;
+                select.Text = "pis";
+                leftBut.Content = "ne";
+                rightBut.Content = "ano";
+                show();
                 mrtvola.Source = null;
             }
             else if (i == 3)
             {
-                text.Text = jsonFromFile[3].Text;
+                textbox.Text = jsonFromFile[3].Text;
+                hid();
                 //background.ImageSource = new BitmapImage(new Uri(@"R:/videohra/photos/interior.jpg"));
             }
             else
@@ -73,6 +104,17 @@ namespace Hra
 
 
 
+        }
+
+        private void leftBut_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void rightBut_Click(object sender, RoutedEventArgs e)
+        {
+            i++;
+            show();
         }
     }
 }
