@@ -21,50 +21,72 @@ namespace Hra
     /// </summary>
     public partial class Poloha1 : Page
     {
-        public string texta;
+        //public string texta;
         public List<Slova> jsonFromFile;
         public int but;
+        public string texta;
+
         public Poloha1()
         {
+
             InitializeComponent();
             BitmapImage mainimg = new BitmapImage();
 
-            texta = File.ReadAllText("R:/videohra/text.json");
+
+
+            // jsonFromFile = JsonConvert.DeserializeObject<List<Slova>>(texta);
+
+            texta = File.ReadAllText("C:/Users/tom/DownloadWin/videohra/json/text.json");
             jsonFromFile = JsonConvert.DeserializeObject<List<Slova>>(texta);
 
-            mainimg.UriSource = new Uri("R:/videohra/photos/SpringTrapScrappy.png");
+
+
+            mainimg.UriSource = new Uri("C:/Users/tom/DownloadWin/videohra/photos/SpringTrapScrappy.png");
             Button btn = new Button();
             btn.Name = "dal";
             btn.Click += dal_Click;
-            background.ImageSource = new BitmapImage(new Uri(@"R:/videohra/photos/library1.jpg"));
-            postavavpravo.Source = new BitmapImage(new Uri(@"R:/videohra/photos/SpringTrapScrappy.png"));
-            mrtvola.Source = new BitmapImage(new Uri(@"R:/videohra/photos/bite.jfif"));
+            background.ImageSource = new BitmapImage(new Uri(@"C:/Users/tom/DownloadWin/videohra/photos/library1.jpg"));
+            postavavpravo.Source = new BitmapImage(new Uri(@"C:/Users/tom/DownloadWin/videohra/photos/detektiv.png"));
+            //postavavlevo.Source = new BitmapImage(new Uri(@"C:/Users/tom/DownloadWin/videohra/photos/detektiv.png"));
+            mrtvola.Source = new BitmapImage(new Uri(@"C:/Users/tom/DownloadWin/videohra/photos/bite.jfif"));
             textbox.Text = jsonFromFile[0].Text;
+            jmenovka.Text = jsonFromFile[0].Jmenovka;
 
-            
 
-            hid();
+
+
+            hidoption();
 
 
 
         }
 
 
-        public void hid()
+        public void hidoption()
         {
             select.Visibility = System.Windows.Visibility.Hidden;
             leftBut.Visibility = System.Windows.Visibility.Hidden;
             rightBut.Visibility = System.Windows.Visibility.Hidden;
             textbox.Visibility = System.Windows.Visibility.Visible;
             dal.Visibility = System.Windows.Visibility.Visible;
+            jmenovka.Visibility = System.Windows.Visibility.Visible;
+
         }
-        public void show()
+        public void hidtext()
         {
             select.Visibility = System.Windows.Visibility.Visible;
             leftBut.Visibility = System.Windows.Visibility.Visible;
             rightBut.Visibility = System.Windows.Visibility.Visible;
             textbox.Visibility = System.Windows.Visibility.Hidden;
             textbox.Visibility = System.Windows.Visibility.Hidden;
+            jmenovka.Visibility = System.Windows.Visibility.Hidden;
+        }
+
+        public void optionbox()
+        {
+            select.Text = "pis";
+            leftBut.Content = "ne";
+            rightBut.Content = "ano";
         }
 
 
@@ -83,16 +105,15 @@ namespace Hra
             else if (i == 2)
             {
                 textbox.Text = jsonFromFile[2].Text;
-                select.Text = "pis";
-                leftBut.Content = "ne";
-                rightBut.Content = "ano";
-                show();
+                optionbox();
+                hidtext();
                 mrtvola.Source = null;
             }
             else if (i == 3)
             {
                 textbox.Text = jsonFromFile[3].Text;
-                hid();
+                hidoption();
+                postavavlevo.Source = new BitmapImage(new Uri(@"C:/Users/tom/DownloadWin/videohra/photos/detektiv.png"));
                 //background.ImageSource = new BitmapImage(new Uri(@"R:/videohra/photos/interior.jpg"));
             }
             else
@@ -114,7 +135,7 @@ namespace Hra
         private void rightBut_Click(object sender, RoutedEventArgs e)
         {
             i++;
-            show();
+            hidtext();
         }
     }
 }
