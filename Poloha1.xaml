@@ -12,7 +12,7 @@
         <Grid.Background>
             <ImageBrush x:Name="background" Stretch="Uniform" AlignmentY="Top" AlignmentX="Left">
                 <ImageBrush.Transform>
-                    <ScaleTransform ScaleX="1.05" ScaleY="1"/>
+                    <ScaleTransform ScaleX="1.1" ScaleY="1.1"/>
                 </ImageBrush.Transform>
             </ImageBrush>
         </Grid.Background>
@@ -65,10 +65,10 @@
         <Button x:Name="dal" Content="Dále" 
                 Grid.Column="1" Grid.Row="2"
                 HorizontalAlignment="Left" VerticalAlignment="Bottom" 
-                Margin="677,0,0,0"  
+                Margin="676,0,0,0"  
                 FontSize="15" FontFamily="Baskerville Old Face"
                 Background="Black" Foreground="#FFC7A800"
-                Height="25" Width="46" Click="dal_Click" />
+                Height="25" Width="46" Click="Dal_Click" />
 
         <TextBlock x:Name="select" Grid.Column="1" Grid.Row="1" 
                     TextWrapping="Wrap" Padding="10,10,10,10"
@@ -83,14 +83,14 @@
                 Grid.Column="1" Grid.Row="1"
                 Height="44" Width="110"
                 HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                Margin="230,0,0,31" Click="leftBut_Click"  />
+                Margin="230,0,0,31" Click="LeftBut_Click"  />
 
         <Button x:Name="rightBut" FontFamily="Baskerville Old Face" FontSize="30"
                 Foreground="#FFC7A800" Background="Black"
                 Grid.Column="1" Grid.Row="1"
                 Height="44" Width="110"
                 HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                Margin="0,0,230,31" Click="rightBut_Click"  />
+                Margin="0,0,230,31" Click="RightBut_Click"  />
         <TextBlock x:Name="jmenovka" FontFamily="Baskerville Old Face"
                    Grid.Column="1" Grid.Row="2" 
                    HorizontalAlignment="Left" VerticalAlignment="Top"

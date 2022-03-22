@@ -25,44 +25,61 @@ namespace Hra
         public List<Slova> jsonFromFile;
         public int but;
         public string texta;
+        public int i = 0;
 
         public Poloha1()
         {
 
             InitializeComponent();
-            BitmapImage mainimg = new BitmapImage();
-
-
+            //BitmapImage mainimg = new BitmapImage();
 
             // jsonFromFile = JsonConvert.DeserializeObject<List<Slova>>(texta);
 
-            texta = File.ReadAllText("C:/Users/tom/DownloadWin/videohra/json/text.json");
+            texta = File.ReadAllText(@"./json/text.json");
             jsonFromFile = JsonConvert.DeserializeObject<List<Slova>>(texta);
 
 
-
-            mainimg.UriSource = new Uri("C:/Users/tom/DownloadWin/videohra/photos/SpringTrapScrappy.png");
+            //mainimg.UriSource = new Uri(@"./photos/detektiv.png", UriKind.Relative);
             Button btn = new Button();
             btn.Name = "dal";
-            btn.Click += dal_Click;
-            background.ImageSource = new BitmapImage(new Uri(@"C:/Users/tom/DownloadWin/videohra/photos/library1.jpg"));
-            postavavpravo.Source = new BitmapImage(new Uri(@"C:/Users/tom/DownloadWin/videohra/photos/detektiv.png"));
-            //postavavlevo.Source = new BitmapImage(new Uri(@"C:/Users/tom/DownloadWin/videohra/photos/detektiv.png"));
-            mrtvola.Source = new BitmapImage(new Uri(@"C:/Users/tom/DownloadWin/videohra/photos/bite.jfif"));
+            btn.Click += Dal_Click;
+            
+            //postavavpravo.Source = new BitmapImage(new Uri(@"./photos/detektiv.png", UriKind.Relative));
+            //mrtvola.Source = new BitmapImage(new Uri(@"./photos/bite.jfif", UriKind.Relative));
             textbox.Text = jsonFromFile[0].Text;
             jmenovka.Text = jsonFromFile[0].Jmenovka;
 
 
+            DetektivS();
+            MrtvolaS();
+            backdropLib();
 
 
-            hidoption();
-
-
+            Hidoption();
 
         }
 
 
-        public void hidoption()
+        public void DetektivS()
+        {
+            postavavpravo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/detektiv.png", UriKind.Relative)));
+        }
+        public void MrtvolaS()
+        {
+            mrtvola.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/bite.jfif", UriKind.Relative)));
+        }
+        public void backdropLib()
+        {
+            background.ImageSource = new BitmapImage(new Uri(@"./photos/library1.jpg", UriKind.Relative));
+        }
+        public void postavavlevoS()
+        {
+            postavavlevo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/detektiv.png", UriKind.Relative)));
+        }
+
+
+
+        public void Hidoption()
         {
             select.Visibility = System.Windows.Visibility.Hidden;
             leftBut.Visibility = System.Windows.Visibility.Hidden;
@@ -72,17 +89,19 @@ namespace Hra
             jmenovka.Visibility = System.Windows.Visibility.Visible;
 
         }
-        public void hidtext()
+        public void Hidtext()
         {
             select.Visibility = System.Windows.Visibility.Visible;
             leftBut.Visibility = System.Windows.Visibility.Visible;
             rightBut.Visibility = System.Windows.Visibility.Visible;
             textbox.Visibility = System.Windows.Visibility.Hidden;
-            textbox.Visibility = System.Windows.Visibility.Hidden;
+            dal.Visibility = System.Windows.Visibility.Hidden;
             jmenovka.Visibility = System.Windows.Visibility.Hidden;
         }
 
-        public void optionbox()
+
+
+        public void Optionbox()
         {
             select.Text = "pis";
             leftBut.Content = "ne";
@@ -90,8 +109,8 @@ namespace Hra
         }
 
 
-        public int i = 0;
-        private void dal_Click(object sender, RoutedEventArgs e)
+
+        public void Dal_Click(object sender, RoutedEventArgs e)
         {
             i++;
             
@@ -99,43 +118,47 @@ namespace Hra
             if (i == 1)
             {
                 textbox.Text = jsonFromFile[1].Text;
-                
+                jmenovka.Text = jsonFromFile[1].Jmenovka;
+
 
             }
             else if (i == 2)
             {
-                textbox.Text = jsonFromFile[2].Text;
-                optionbox();
-                hidtext();
+                Optionbox();
+                Hidtext();
                 mrtvola.Source = null;
+                
+                }
+
+
+
+
+
+        }
+
+        private void LeftBut_Click(object sender, RoutedEventArgs e)
+        {
+            textbox.Text = jsonFromFile[3].Text;
+            jmenovka.Text = jsonFromFile[3].Jmenovka;
+        }
+
+        private void RightBut_Click(object sender, RoutedEventArgs e)
+        {
+
+            /*i++;
+            if (i==1)
+            {
+                textbox.Text = jsonFromFile[2].Text;
+                jmenovka.Text = jsonFromFile[2].Jmenovka;
+                hidoption();
+                postavavlevoS();
             }
-            else if (i == 3)
+            else if (i == 2)
             {
                 textbox.Text = jsonFromFile[3].Text;
-                hidoption();
-                postavavlevo.Source = new BitmapImage(new Uri(@"C:/Users/tom/DownloadWin/videohra/photos/detektiv.png"));
-                //background.ImageSource = new BitmapImage(new Uri(@"R:/videohra/photos/interior.jpg"));
-            }
-            else
-            {
-
-                
-            }
-
-
-
-
-        }
-
-        private void leftBut_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void rightBut_Click(object sender, RoutedEventArgs e)
-        {
-            i++;
-            hidtext();
+                jmenovka.Text = jsonFromFile[3].Jmenovka;
+            }*/
+            
         }
     }
 }

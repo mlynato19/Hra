@@ -12,7 +12,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/main.jpg" Stretch="Uniform" AlignmentY="Top" AlignmentX="Left">
                 <ImageBrush.Transform>
-                    <ScaleTransform ScaleX="1.05" ScaleY="1.05"/>
+                    <ScaleTransform ScaleX="1.1" ScaleY="1.1"/>
                 </ImageBrush.Transform>
             </ImageBrush>
         </Grid.Background>
