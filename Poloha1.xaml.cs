@@ -76,7 +76,7 @@ namespace Hra
         }
         public void PostavavlevoS()
         {
-            postavavlevo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/detektiv.png", UriKind.Relative)));
+            postavavlevo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/policeman.png", UriKind.Relative)));
         }
 
 
@@ -89,8 +89,6 @@ namespace Hra
             textbox.Visibility = System.Windows.Visibility.Visible;
             dal.Visibility = System.Windows.Visibility.Visible;
             jmenovka.Visibility = System.Windows.Visibility.Visible;
-            //postavavlevo.Visibility = System.Windows.Visibility.Hidden;
-
         }
         public void Hidtext()
         {
@@ -100,7 +98,6 @@ namespace Hra
             textbox.Visibility = System.Windows.Visibility.Hidden;
             dal.Visibility = System.Windows.Visibility.Hidden;
             jmenovka.Visibility = System.Windows.Visibility.Hidden;
-            //postavavlevo.Visibility = System.Windows.Visibility.Hidden;
         }
 
 

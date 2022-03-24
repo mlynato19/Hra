@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="bite.jfif" />
+    <None Remove="interior.jpg" />
     <None Remove="library1.jpg" />
     <None Remove="main.jpg" />
     <None Remove="pub.jpg" />
@@ -20,6 +21,7 @@
 
   <ItemGroup>
     <Resource Include="bite.jfif" />
+    <Resource Include="interior.jpg" />
     <Resource Include="library1.jpg" />
     <Resource Include="main.jpg" />
     <Resource Include="pub.jpg" />

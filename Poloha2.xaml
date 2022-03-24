@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush x:Name="background" Stretch="Uniform" AlignmentY="Top" AlignmentX="Left">
+            <ImageBrush  ImageSource="/interior.jpg" Stretch="Uniform" AlignmentY="Top" AlignmentX="Left">
                 <ImageBrush.Transform>
                     <ScaleTransform ScaleX="1.1" ScaleY="1.1"/>
                 </ImageBrush.Transform>
@@ -75,6 +75,7 @@
                 Height="44" Width="110"
                 HorizontalAlignment="Right" VerticalAlignment="Bottom"
                 Margin="0,0,230,31" Click="RightBut_Click"  />
+        
         <TextBlock x:Name="jmenovka" FontFamily="Baskerville Old Face"
                    Grid.Column="1" Grid.Row="2" 
                    HorizontalAlignment="Left" VerticalAlignment="Top"
