@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Text.Json;
+using System.Windows.Navigation;
 using Newtonsoft.Json;
 using System.IO;
 namespace Hra
@@ -43,7 +44,7 @@ namespace Hra
             Button btn = new Button();
             btn.Name = "dal";
             btn.Click += Dal_Click;
-            
+
             //postavavpravo.Source = new BitmapImage(new Uri(@"./photos/detektiv.png", UriKind.Relative));
             //mrtvola.Source = new BitmapImage(new Uri(@"./photos/bite.jfif", UriKind.Relative));
             textbox.Text = jsonFromFile[0].Text;
@@ -52,7 +53,8 @@ namespace Hra
 
             DetektivS();
             MrtvolaS();
-            backdropLib();
+            BackdropLib();
+            //PostavavlevoS();
 
 
             Hidoption();
@@ -66,13 +68,13 @@ namespace Hra
         }
         public void MrtvolaS()
         {
-            mrtvola.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/bite.jfif", UriKind.Relative)));
+            mrtvola.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/mrtvola.png", UriKind.Relative)));
         }
-        public void backdropLib()
+        public void BackdropLib()
         {
             background.ImageSource = new BitmapImage(new Uri(@"./photos/library1.jpg", UriKind.Relative));
         }
-        public void postavavlevoS()
+        public void PostavavlevoS()
         {
             postavavlevo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/detektiv.png", UriKind.Relative)));
         }
@@ -87,6 +89,7 @@ namespace Hra
             textbox.Visibility = System.Windows.Visibility.Visible;
             dal.Visibility = System.Windows.Visibility.Visible;
             jmenovka.Visibility = System.Windows.Visibility.Visible;
+            //postavavlevo.Visibility = System.Windows.Visibility.Hidden;
 
         }
         public void Hidtext()
@@ -97,23 +100,23 @@ namespace Hra
             textbox.Visibility = System.Windows.Visibility.Hidden;
             dal.Visibility = System.Windows.Visibility.Hidden;
             jmenovka.Visibility = System.Windows.Visibility.Hidden;
+            //postavavlevo.Visibility = System.Windows.Visibility.Hidden;
         }
 
 
 
         public void Optionbox()
         {
-            select.Text = "pis";
+            select.Text = "Chcete postoupit do další lokace?";
             leftBut.Content = "ne";
             rightBut.Content = "ano";
         }
 
 
-
-        public void Dal_Click(object sender, RoutedEventArgs e)
+        public void Click()
         {
             i++;
-            
+            Hidoption();
 
             if (i == 1)
             {
@@ -124,41 +127,50 @@ namespace Hra
             }
             else if (i == 2)
             {
+                textbox.Text = jsonFromFile[2].Text;
+                jmenovka.Text = jsonFromFile[2].Jmenovka;
+                mrtvola.Source = null;
+                PostavavlevoS();
+
+            }
+            else if (i == 3)
+            {
+                textbox.Text = jsonFromFile[3].Text;
+                jmenovka.Text = jsonFromFile[3].Jmenovka;
+            }
+            else
+            {
                 Optionbox();
                 Hidtext();
-                mrtvola.Source = null;
-                
-                }
 
-
-
-
-
+            }
+            
         }
 
-        private void LeftBut_Click(object sender, RoutedEventArgs e)
+
+        public void Dal_Click(object sender, RoutedEventArgs e)
         {
-            textbox.Text = jsonFromFile[3].Text;
-            jmenovka.Text = jsonFromFile[3].Jmenovka;
+            Click();
+            
+        }
+
+        
+
+        public void LeftBut_Click(object sender, RoutedEventArgs e)
+        {
+            
+            Hidoption();
+            
+            
+
         }
 
         private void RightBut_Click(object sender, RoutedEventArgs e)
         {
+            NavigationService next = NavigationService.GetNavigationService(this);
+            next.Navigate(new Uri("Poloha2.xaml", UriKind.Relative));
 
-            /*i++;
-            if (i==1)
-            {
-                textbox.Text = jsonFromFile[2].Text;
-                jmenovka.Text = jsonFromFile[2].Jmenovka;
-                hidoption();
-                postavavlevoS();
-            }
-            else if (i == 2)
-            {
-                textbox.Text = jsonFromFile[3].Text;
-                jmenovka.Text = jsonFromFile[3].Jmenovka;
-            }*/
-            
+
         }
     }
 }
