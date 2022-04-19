@@ -114,7 +114,8 @@ public partial class Poloha2 : Page
 
         private void RightBut_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService next = NavigationService.GetNavigationService(this);
+            next.Navigate(new Uri("Venek.xaml", UriKind.Relative));
         }
     }
 }

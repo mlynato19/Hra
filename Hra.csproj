@@ -11,7 +11,10 @@
     <None Remove="interior.jpg" />
     <None Remove="library1.jpg" />
     <None Remove="main.jpg" />
+    <None Remove="mrtvola.png" />
+    <None Remove="out.jpg" />
     <None Remove="pub.jpg" />
+    <None Remove="raccoon-top.png" />
     <None Remove="SpringTrapScrappy.png" />
   </ItemGroup>
 
@@ -24,7 +27,10 @@
     <Resource Include="interior.jpg" />
     <Resource Include="library1.jpg" />
     <Resource Include="main.jpg" />
+    <Resource Include="mrtvola.png" />
+    <Resource Include="out.jpg" />
     <Resource Include="pub.jpg" />
+    <Resource Include="raccoon-top.png" />
     <Resource Include="SpringTrapScrappy.png" />
   </ItemGroup>
 

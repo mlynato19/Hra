@@ -15,6 +15,7 @@ using System.Text.Json;
 using System.Windows.Navigation;
 using Newtonsoft.Json;
 using System.IO;
+
 namespace Hra
 {
     /// <summary>
@@ -30,6 +31,7 @@ namespace Hra
 
         public Poloha1()
         {
+            
 
             InitializeComponent();
             //BitmapImage mainimg = new BitmapImage();
@@ -61,11 +63,11 @@ namespace Hra
 
         }
 
-
         public void DetektivS()
         {
             postavavpravo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/detektiv.png", UriKind.Relative)));
         }
+
         public void MrtvolaS()
         {
             mrtvola.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/mrtvola.png", UriKind.Relative)));
