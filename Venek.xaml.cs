@@ -24,6 +24,7 @@ namespace Hra
         public int kleft = -700;
         public int ktop = -100;
 
+
         public Venek()
         {
             InitializeComponent();
@@ -50,10 +51,10 @@ namespace Hra
                 rac.Margin = new Thickness(kleft, ktop, 0, 0);
             }
 
-            if (kleft >= 700)
+            if (ktop <= -330)
             {
                 rac.Margin = new Thickness(kleft, ktop, 0, 0);
-                
+
             }
             else if (e.Key == Key.Up)
             {
@@ -62,7 +63,7 @@ namespace Hra
 
             }
 
-            if (ktop >= 300)
+            if (ktop >= 330)
             {
                 rac.Margin = new Thickness(kleft, ktop, 0, 0);
             }
@@ -73,7 +74,7 @@ namespace Hra
 
             }
 
-            if (ktop <= -330)
+            if (kleft >= 730)
             {
                 rac.Margin = new Thickness(kleft, ktop, 0, 0);
                 //MessageBox.Show("a");
@@ -85,6 +86,50 @@ namespace Hra
             }
 
             
+
+
+
+
+            if (ktop <= -180 && kleft >= -720 && kleft <= -610)
+            {  
+                NavigationService next = NavigationService.GetNavigationService(this);
+                next.Navigate(new Uri("Poloha2.xaml", UriKind.Relative));
+            }
+
+            if (ktop <= -180 && kleft >= -460 && kleft <= -350)
+            {
+                MessageBox.Show("a");
+            }
+
+            if (ktop <= -180 && kleft >= -180 && kleft <= -90)
+            {
+                MessageBox.Show("b");
+            }
+
+            if (ktop <= -180 && kleft >= 80 && kleft <= 170)
+            {
+                MessageBox.Show("c");
+            }
+
+            if (ktop <= -180 && kleft >= 80 && kleft <= 170)
+            {
+                MessageBox.Show("d");
+            }
+
+            if (ktop <= -80 && kleft >= 410 && kleft <= 720)
+            {
+                MessageBox.Show("e");
+            }
+
+            if (ktop >= 110 && kleft >= -520 && kleft <= -350)
+            {
+                MessageBox.Show("f");
+            }
+
+            if (ktop >= 110 && kleft >= -720 && kleft <= -610)
+            {
+                MessageBox.Show("f");
+            }
         }
 
         

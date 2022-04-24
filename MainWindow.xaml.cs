@@ -25,6 +25,7 @@ namespace Hra
             InitializeComponent();
         }
 
+
         
     }
 }
