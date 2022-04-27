@@ -21,8 +21,8 @@ namespace Hra
     /// 
     public partial class Venek : Page
     {
-        public int kleft = -700;
-        public int ktop = -100;
+        public int kleft = 0;
+        public int ktop = 0;
 
 
         public Venek()
@@ -118,7 +118,8 @@ namespace Hra
 
             if (ktop <= -80 && kleft >= 410 && kleft <= 720)
             {
-                MessageBox.Show("e");
+                NavigationService next = NavigationService.GetNavigationService(this);
+                next.Navigate(new Uri("Hospoda.xaml", UriKind.Relative));
             }
 
             if (ktop >= 110 && kleft >= -520 && kleft <= -350)

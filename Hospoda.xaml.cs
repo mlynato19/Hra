@@ -21,15 +21,15 @@ namespace Hra
     /// <summary>
     /// Interakční logika pro Poloha2.xaml
     /// </summary>
-    
-public partial class Poloha2 : Page
+
+    public partial class Hospoda : Page
     {
         public List<Slova> jsonFromFile;
         public int but;
         public string texta;
         public int i = 0;
 
-        public Poloha2()
+        public Hospoda()
         {
             InitializeComponent();
             Hidoption();
@@ -68,7 +68,7 @@ public partial class Poloha2 : Page
         }
         public void PostavavlevoS()
         {
-            postavavlevo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/policeman.png", UriKind.Relative)));
+            postavavlevo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/cisnik.png", UriKind.Relative)));
         }
 
         public void Dal_Click(object sender, RoutedEventArgs e)
@@ -99,7 +99,7 @@ public partial class Poloha2 : Page
             {
                 Hidtext();
                 Optionbox();
-                
+
 
             }
         }
@@ -107,8 +107,8 @@ public partial class Poloha2 : Page
         public void Optionbox()
         {
             select.Text = "Na co se zeptám?";
-            leftButText.Text = "Víme, jak dlouho je mrtvý?";
-            rightButText.Text = "Měl nějaké nepřátele?";
+            leftButText.Text = "pes";
+            rightButText.Text = "kocka";
         }
         public void LeftBut_Click(object sender, RoutedEventArgs e)
         {

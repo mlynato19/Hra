@@ -19,7 +19,7 @@
         </Grid.Background>
 
 
-        <Image x:Name="rac"  Height="76" Margin="-700,-100,0,0"  Width="75" Source="/raccoon-top.png" Stretch="Uniform" StretchDirection="Both"/>
+        <Image x:Name="rac"  Height="76" Margin="0,0,0,0"  Width="75" Source="/raccoon-top.png" Stretch="Uniform" StretchDirection="Both"/>
 
         <Label Content="Hospoda" HorizontalAlignment="Left" Margin="701,52,0,0" VerticalAlignment="Top" Background="Black" FontFamily="Baskerville Old Face" Foreground="#FFC7A800" Height="24" Width="54"/>
         <Label Content="Místo vraždy" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Background="Black" FontFamily="Baskerville Old Face" Foreground="#FFC7A800" Height="24" Width="72"/>
