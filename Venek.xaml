@@ -19,18 +19,79 @@
         </Grid.Background>
 
 
-        <Image x:Name="rac"  Height="76" Margin="0,0,0,0"  Width="75" Source="/raccoon-top.png" Stretch="Uniform" StretchDirection="Both"/>
+        <Image x:Name="rac"  
+               Height="76" Width="75"
+               Margin="0,0,0,0"
+               Source="/raccoon-top.png" 
+               Stretch="Uniform" StretchDirection="Both"/>
 
-        <Label Content="Hospoda" HorizontalAlignment="Left" Margin="701,52,0,0" VerticalAlignment="Top" Background="Black" FontFamily="Baskerville Old Face" Foreground="#FFC7A800" Height="24" Width="54"/>
-        <Label Content="Místo vraždy" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Background="Black" FontFamily="Baskerville Old Face" Foreground="#FFC7A800" Height="24" Width="72"/>
-        <Label Content="Placeholder1" HorizontalAlignment="Left" Margin="24,384,0,0" VerticalAlignment="Top" Background="Black" FontFamily="Baskerville Old Face" Foreground="#FFC7A800" Height="24" Width="72"/>
-        <Label Content="Placeholder2" HorizontalAlignment="Left" Margin="176,10,0,0" VerticalAlignment="Top" Background="Black" FontFamily="Baskerville Old Face" Foreground="#FFC7A800" Height="24" Width="72"/>
-        <Label Content="Placeholder3" HorizontalAlignment="Left" Margin="152,384,0,0" VerticalAlignment="Top" Background="Black" FontFamily="Baskerville Old Face" Foreground="#FFC7A800" Height="24" Width="73"/>
-        <Label x:Name="Cont2" HorizontalAlignment="Left" Margin="457,10,0,0" VerticalAlignment="Top" Background="Black" FontFamily="Baskerville Old Face" Foreground="#FFC7A800" Height="24" Width="72"/>
-        <Label x:Name="Cont" HorizontalAlignment="Left" Margin="312,10,0,0" VerticalAlignment="Top" Background="Black" FontFamily="Baskerville Old Face" Foreground="#FFC7A800" Height="24" Width="72"/>
-        <Rectangle Fill="#B2000000" HorizontalAlignment="Left" Height="119" Margin="578,331,0,0" Stroke="Black"  VerticalAlignment="Top" Width="222"/>
-        <Image HorizontalAlignment="Left" Height="66" Margin="678,342,0,0" VerticalAlignment="Top" Width="100" Source="/keys.png"/>
-        <Label Content="Pro pohyb postavy &#xD;&#xA;použijte šipky" HorizontalAlignment="Left" Margin="586,336,0,0" FontFamily="Baskerville Old Face" Foreground="#FFC7A800" VerticalAlignment="Top" Height="39" Width="111"/>
+        <Label Content="Hospoda" 
+               HorizontalContentAlignment="Center" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Margin="701,52,0,0"  
+               Background="Black" Foreground="#FFC7A800"
+               FontFamily="Baskerville Old Face"  
+               Height="24" Width="54"/>
+        <Label Content="Místo vraždy"
+               HorizontalContentAlignment="Center" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Margin="28,10,0,0"  
+               Background="Black" Foreground="#FFC7A800"
+               FontFamily="Baskerville Old Face"  
+               Height="24" Width="72"/>
+        <Label Content="Placeholder1"
+               HorizontalContentAlignment="Center" 
+               HorizontalAlignment="Left"  VerticalAlignment="Top"
+               Margin="24,384,0,0" 
+               Background="Black" Foreground="#FFC7A800"
+               FontFamily="Baskerville Old Face"  
+               Height="24" Width="72"/>
+        <Label Content="Zahrada"
+               HorizontalContentAlignment="Center" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Margin="176,10,0,0"  
+               Background="Black" Foreground="#FFC7A800"
+               FontFamily="Baskerville Old Face"  
+               Height="24" Width="72"/>
+        <Label Content="Placeholder3"
+               HorizontalContentAlignment="Center" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Margin="152,384,0,0" 
+               Background="Black" Foreground="#FFC7A800"
+               FontFamily="Baskerville Old Face"  
+               Height="24" Width="73"/>
+        <Label x:Name="Cont2"
+               HorizontalContentAlignment="Center" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Margin="457,10,0,0"  
+               Background="Black" Foreground="#FFC7A800"
+               FontFamily="Baskerville Old Face"  
+               Height="24" Width="72"/>
+        <Label x:Name="Cont"
+               HorizontalContentAlignment="Center" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Margin="312,10,0,0"  
+               Background="Black" Foreground="#FFC7A800"
+               FontFamily="Baskerville Old Face"  
+               Height="24" Width="72"/>
+        
+        <Rectangle Fill="#B2000000" Stroke="Black"
+                   HorizontalAlignment="Left" 
+                   Height="119" Width="222" VerticalAlignment="Top"
+                   Margin="578,331,0,0"/>
+        
+        <Image HorizontalAlignment="Left" 
+               Height="66"  Width="100"
+               Margin="678,342,0,0" 
+               VerticalAlignment="Top" 
+               Source="/keys.png"/>
+        
+        <Label Content="Pro pohyb postavy &#xD;&#xA;použijte šipky" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Margin="586,336,0,0" 
+               FontFamily="Baskerville Old Face" 
+               Foreground="#FFC7A800"  
+               Height="39" Width="111"/>
 
 
 

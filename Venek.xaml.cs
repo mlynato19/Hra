@@ -98,7 +98,8 @@ namespace Hra
 
             if (ktop <= -180 && kleft >= -460 && kleft <= -350)
             {
-                MessageBox.Show("a");
+                NavigationService next = NavigationService.GetNavigationService(this);
+                next.Navigate(new Uri("Zahrada.xaml", UriKind.Relative));
             }
 
             if (ktop <= -180 && kleft >= -180 && kleft <= -90)
@@ -106,15 +107,12 @@ namespace Hra
                 MessageBox.Show("b");
             }
 
-            if (ktop <= -180 && kleft >= 80 && kleft <= 170)
+            if (ktop <= -180 && kleft >= 70 && kleft <= 170)
             {
                 MessageBox.Show("c");
             }
 
-            if (ktop <= -180 && kleft >= 80 && kleft <= 170)
-            {
-                MessageBox.Show("d");
-            }
+            
 
             if (ktop <= -80 && kleft >= 410 && kleft <= 720)
             {

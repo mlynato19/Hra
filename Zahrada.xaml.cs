@@ -18,15 +18,14 @@ using System.IO;
 
 namespace Hra
 {
-
-    public partial class Hospoda : Page
+    public partial class Zahrada : Page
     {
         public List<Slova> jsonFromFile;
         public int but;
         public string texta;
         public int i = 0;
 
-        public Hospoda()
+        public Zahrada()
         {
             InitializeComponent();
             Hidoption();
@@ -65,7 +64,7 @@ namespace Hra
         }
         public void PostavavlevoS()
         {
-            postavavlevo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/cisnik.png", UriKind.Relative)));
+            postavavlevo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/policeman.png", UriKind.Relative)));
         }
 
         public void Dal_Click(object sender, RoutedEventArgs e)
@@ -103,9 +102,9 @@ namespace Hra
 
         public void Optionbox()
         {
-            select.Text = "Na co se zeptám?";
-            leftButText.Text = "pes";
-            rightButText.Text = "kocka";
+            select.Text = "a";
+            leftButText.Text = "b";
+            rightButText.Text = "c";
         }
         public void LeftBut_Click(object sender, RoutedEventArgs e)
         {
