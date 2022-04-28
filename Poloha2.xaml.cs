@@ -24,23 +24,32 @@ namespace Hra
     
 public partial class Poloha2 : Page
     {
+        //public int location = 1;
+
         public List<Slova> jsonFromFile;
         public int but;
         public string texta;
-        public int i = 0;
+        
 
         public Poloha2()
         {
+            
             InitializeComponent();
+            
             Hidoption();
             DetektivS();
             PostavavlevoS();
+            
+
 
             texta = File.ReadAllText(@"./json/text.json");
             jsonFromFile = JsonConvert.DeserializeObject<List<Slova>>(texta);
-
-            textbox.Text = jsonFromFile[0].Text;
-            jmenovka.Text = jsonFromFile[0].Jmenovka;
+            if (Location.loc == 0)
+            {
+                textbox.Text = jsonFromFile[0].Text;
+                jmenovka.Text = jsonFromFile[0].Jmenovka;
+            }
+            
         }
 
         public void Hidoption()
@@ -70,37 +79,68 @@ public partial class Poloha2 : Page
         {
             postavavlevo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/policeman.png", UriKind.Relative)));
         }
-
+        public int i = 0;
         public void Dal_Click(object sender, RoutedEventArgs e)
         {
-            i++;
-            Hidoption();
-
-            if (i == 1)
+            Location location = new Location();
+            if (location.loc == 0)
             {
-                textbox.Text = jsonFromFile[1].Text;
-                jmenovka.Text = jsonFromFile[1].Jmenovka;
-
-
-            }
-            else if (i == 2)
-            {
-                textbox.Text = jsonFromFile[2].Text;
-                jmenovka.Text = jsonFromFile[2].Jmenovka;
-                PostavavlevoS();
-
-            }
-            else if (i == 3)
-            {
-                textbox.Text = jsonFromFile[3].Text;
-                jmenovka.Text = jsonFromFile[3].Jmenovka;
-            }
-            else
-            {
-                Hidtext();
-                Optionbox();
+                i++;
+                Hidoption();
                 
+                if (i == 1)
+                {
+                    textbox.Text = "pes";
+                    jmenovka.Text = jsonFromFile[1].Jmenovka;
 
+
+                }
+                else if (i == 2)
+                {
+                    textbox.Text = jsonFromFile[2].Text;
+                    jmenovka.Text = jsonFromFile[2].Jmenovka;
+                    PostavavlevoS();
+
+                }
+                else if (i == 3)
+                {
+                    textbox.Text = jsonFromFile[3].Text;
+                    jmenovka.Text = jsonFromFile[3].Jmenovka;
+                }
+                else
+                {
+                    Hidtext();
+                    Optionbox();
+                }
+            } else if (location.loc == 1)
+            {
+                i++;
+                Hidoption();
+                textbox.Text = /*jsonFromFile[1].Text*/"hospoda uaaaaaa";
+                if (i == 1)
+                {
+                    textbox.Text = /*jsonFromFile[1].Text*/"hospoda uaaaaaa";
+                    jmenovka.Text = jsonFromFile[1].Jmenovka;
+
+
+                }
+                else if (i == 2)
+                {
+                    textbox.Text = "pes";
+                    jmenovka.Text = jsonFromFile[2].Jmenovka;
+                    PostavavlevoS();
+
+                }
+                else if (i == 3)
+                {
+                    textbox.Text = jsonFromFile[3].Text;
+                    jmenovka.Text = jsonFromFile[3].Jmenovka;
+                }
+                else
+                {
+                    Hidtext();
+                    Optionbox();
+                }
             }
         }
 

@@ -38,6 +38,7 @@ namespace Hra
 
         private void Press(object sender, KeyEventArgs e)
         {
+            Location location = new Location();
             Cont.Content = kleft;
             Cont2.Content = ktop;
 
@@ -91,7 +92,9 @@ namespace Hra
 
 
             if (ktop <= -180 && kleft >= -720 && kleft <= -610)
-            {  
+            {
+                
+                location.loc = 0;
                 NavigationService next = NavigationService.GetNavigationService(this);
                 next.Navigate(new Uri("Poloha2.xaml", UriKind.Relative));
             }
@@ -116,8 +119,10 @@ namespace Hra
 
             if (ktop <= -80 && kleft >= 410 && kleft <= 720)
             {
+                
+                location.loc = 1;
                 NavigationService next = NavigationService.GetNavigationService(this);
-                next.Navigate(new Uri("Hospoda.xaml", UriKind.Relative));
+                next.Navigate(new Uri("Poloha2.xaml", UriKind.Relative));
             }
 
             if (ktop >= 110 && kleft >= -520 && kleft <= -350)

@@ -41,6 +41,7 @@ namespace Hra
             texta = File.ReadAllText(@"./json/text.json");
             jsonFromFile = JsonConvert.DeserializeObject<List<Slova>>(texta);
 
+            
 
             //mainimg.UriSource = new Uri(@"./photos/detektiv.png", UriKind.Relative);
             Button btn = new Button();
