@@ -24,6 +24,7 @@ namespace Hra
         public int kleft = 0;
         public int ktop = 0;
 
+        
 
         public Venek()
         {
@@ -86,17 +87,16 @@ namespace Hra
                 rac.Margin = new Thickness(kleft, ktop, 0, 0);
             }
 
-            
+
 
 
 
 
             if (ktop <= -180 && kleft >= -720 && kleft <= -610)
             {
-                
-                location.loc = 0;
-                NavigationService next = NavigationService.GetNavigationService(this);
-                next.Navigate(new Uri("Poloha2.xaml", UriKind.Relative));
+                NavigationService.Navigate(new Poloha2("vnitrek"));
+                //NavigationService next = NavigationService.GetNavigationService(this);
+                //next.Navigate(new Uri("Poloha2.xaml", UriKind.Relative));
             }
 
             if (ktop <= -180 && kleft >= -460 && kleft <= -350)
@@ -119,10 +119,8 @@ namespace Hra
 
             if (ktop <= -80 && kleft >= 410 && kleft <= 720)
             {
-                
-                location.loc = 1;
-                NavigationService next = NavigationService.GetNavigationService(this);
-                next.Navigate(new Uri("Poloha2.xaml", UriKind.Relative));
+
+                NavigationService.Navigate(new Poloha2("hospoda"));
             }
 
             if (ktop >= 110 && kleft >= -520 && kleft <= -350)

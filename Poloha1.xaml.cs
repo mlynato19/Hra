@@ -167,8 +167,7 @@ namespace Hra
 
         private void RightBut_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService next = NavigationService.GetNavigationService(this);
-            next.Navigate(new Uri("Poloha2.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Poloha2("vnitrek"));
 
 
         }

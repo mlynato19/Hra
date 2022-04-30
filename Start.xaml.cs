@@ -26,8 +26,7 @@ namespace Hra
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService next = NavigationService.GetNavigationService(this);
-            next.Navigate(new Uri("Poloha1.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Poloha2("intro"));
 
         }
 

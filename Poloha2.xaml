@@ -10,10 +10,10 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush  ImageSource="/interior.jpg" Stretch="Uniform" AlignmentY="Top" AlignmentX="Left">
-                <ImageBrush.Transform>
-                    <ScaleTransform ScaleX="1.1" ScaleY="1.1"/>
-                </ImageBrush.Transform>
+            <ImageBrush x:Name="background" Stretch="Uniform" AlignmentY="Top" AlignmentX="Left">
+            <ImageBrush.Transform>
+                <ScaleTransform ScaleX="1.1" ScaleY="1.1"/>
+            </ImageBrush.Transform>
             </ImageBrush>
         </Grid.Background>
         <Grid.ColumnDefinitions>
