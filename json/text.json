@@ -1,1 +1,5 @@
-[{"Text":"prvni text (backstory, co o ni vi,...)","Jmenovka":"Detektiv"},{"Text":"pokracovani...","Jmenovka":"Detektiv"},{"Text":"(co zjistil.....)","Jmenovka":"Policista"},{"Text":"nic dalšího tu u není..., měl bych jít vyslechnout svědky v domě.","Jmenovka":"Detektiv"}]
+[{"Num":
+	{"Text":"prvni text (backstory, co o ni vi,...)","Jmenovka":"Detektiv"},{"Text":"pokracovani...","Jmenovka":"Detektiv"},{"Text":"(co zjistil.....)","Jmenovka":"Policista"},{"Text":"nic dalšího tu u není..., měl bych jít vyslechnout svědky v domě.","Jmenovka":"Detektiv"},
+"Num":
+	{"1":{"name":"cc"},"2":{"name":"dd"}}
+]

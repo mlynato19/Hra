@@ -39,7 +39,7 @@
                Background="Black" Foreground="#FFC7A800"
                FontFamily="Baskerville Old Face"  
                Height="24" Width="72"/>
-        <Label Content="Placeholder1"
+        <Label Content="Dům"
                HorizontalContentAlignment="Center" 
                HorizontalAlignment="Left"  VerticalAlignment="Top"
                Margin="24,384,0,0" 

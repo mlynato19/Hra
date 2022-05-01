@@ -29,49 +29,55 @@ public partial class Poloha2 : Page
         public List<Slova> jsonFromFile;
         public int but;
         public string texta;
-        public int text = 0;
+        public int pozice = 0;
+        //pozice 0 = intro, pozice 1 = vnitrek, pozice 2 = hospoda, pozice 3 = zahrada
 
-        public Poloha2(string Mistnost)
+
+        public Poloha2(string mistnost)
         {
             
             InitializeComponent();
-
+            mrtvola.Visibility = Visibility.Collapsed;
             texta = File.ReadAllText(@"./json/text.json");
             jsonFromFile = JsonConvert.DeserializeObject<List<Slova>>(texta);
 
-            if (Mistnost == "intro")
+            if (mistnost == "intro")
             {
                 background.ImageSource = new BitmapImage(new Uri(@"./photos/library1.jpg", UriKind.Relative));
                 getout.Visibility = System.Windows.Visibility.Hidden;
-                text = 0;
+                pozice = 0;
+                postavavlevo.Visibility = Visibility.Collapsed;
+                mrtvola.Visibility = Visibility.Visible;
                 textbox.Text = jsonFromFile[0].Text;
                 jmenovka.Text = jsonFromFile[0].Jmenovka;
 
             }
-            if (Mistnost == "vnitrek")
+            if (mistnost == "vnitrek")
             {
                 background.ImageSource = new BitmapImage(new Uri(@"./photos/interior.jpg", UriKind.Relative));
-                text = 1;
+                
+                pozice = 1;
                 
 
-            } else if (Mistnost == "hospoda") 
+            } else if (mistnost == "hospoda") 
             {
                 background.ImageSource = new BitmapImage(new Uri(@"./photos/pub1.jpg", UriKind.Relative));
-                text = 2;
+                pozice = 2;
+            }
+            else if (mistnost == "zahrada")
+            {
+                background.ImageSource = new BitmapImage(new Uri(@"./photos/Victorian-Garden-3.jpg", UriKind.Relative));
+                pozice = 3;
             }
 
             Hidoption();
             DetektivS();
             PostavavlevoS();
-            
-
-
-            
-           
-                
-           
+            MrtvolaS();
             
         }
+
+
 
         public int i = 0;
         public void Dal_Click(object sender, RoutedEventArgs e)
@@ -80,18 +86,50 @@ public partial class Poloha2 : Page
             Hidoption();
 
 
-            if (text == 0)
+            if (pozice == 0)
             {
                 if (i == 1)
                 {
                     textbox.Text = "pes";
+                    jmenovka.Text = jsonFromFile[1].Jmenovka;
+                    
+
+                }
+                else if (i == 2)
+                {
+                    textbox.Text = jsonFromFile[2].Text;
+                    jmenovka.Text = jsonFromFile[2].Jmenovka;
+
+                    PostavavlevoS();
+                    mrtvola.Visibility = Visibility.Collapsed;
+                    postavavlevo.Visibility = Visibility.Visible;
+                }
+                else if (i == 3)
+                {
+                    textbox.Text = jsonFromFile[3].Text;
+                    jmenovka.Text = jsonFromFile[3].Jmenovka;
+                   
+                }
+                else
+                {
+                    Hidtext();
+                    Optionbox();
+                }
+            }
+            else if (pozice == 1)
+            {
+
+                if (i == 1)
+                {
+                    Hidoption();
+                    textbox.Text = /*jsonFromFile[1].Text*/"vnitrtek";
                     jmenovka.Text = jsonFromFile[1].Jmenovka;
 
 
                 }
                 else if (i == 2)
                 {
-                    textbox.Text = jsonFromFile[2].Text;
+                    textbox.Text = "owo";
                     jmenovka.Text = jsonFromFile[2].Jmenovka;
                     PostavavlevoS();
 
@@ -107,13 +145,42 @@ public partial class Poloha2 : Page
                     Optionbox();
                 }
             }
-            else if (text == 1)
+            else if (pozice == 2)
             {
 
                 if (i == 1)
                 {
                     Hidoption();
                     textbox.Text = /*jsonFromFile[1].Text*/"hospoda uaaaaaa";
+                    jmenovka.Text = jsonFromFile[1].Jmenovka;
+
+
+                }
+                else if (i == 2)
+                {
+                    textbox.Text = "owo";
+                    jmenovka.Text = jsonFromFile[2].Jmenovka;
+                    PostavavlevoS();
+
+                }
+                else if (i == 3)
+                {
+                    textbox.Text = jsonFromFile[3].Text;
+                    jmenovka.Text = jsonFromFile[3].Jmenovka;
+                }
+                else
+                {
+                    Hidtext();
+                    Optionbox();
+                }
+            }
+            else if (pozice == 3)
+            {
+
+                if (i == 1)
+                {
+                    Hidoption();
+                    textbox.Text = /*jsonFromFile[1].Text*/"ZAHRADA";
                     jmenovka.Text = jsonFromFile[1].Jmenovka;
 
 
@@ -162,9 +229,29 @@ public partial class Poloha2 : Page
         {
             postavavpravo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/detektiv.png", UriKind.Relative)));
         }
+
+        public void MrtvolaS()
+        {
+            mrtvola.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/mrtvola.png", UriKind.Relative)));
+        }
+
         public void PostavavlevoS()
         {
-            postavavlevo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/policeman.png", UriKind.Relative)));
+            if (pozice == 0)
+            {
+                postavavlevo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/policeman.png", UriKind.Relative)));
+            } else if (pozice == 1)
+            {
+                postavavlevo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/policeman.png", UriKind.Relative)));
+            } else if (pozice == 2)
+            {
+                postavavlevo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/cisnik.png", UriKind.Relative)));
+            } else if (pozice == 3)
+            {
+                postavavlevo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/policeman.png", UriKind.Relative)));
+            }
+
+            
         }
         
 
@@ -190,8 +277,16 @@ public partial class Poloha2 : Page
 
         public void Getout_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService next = NavigationService.GetNavigationService(this);
-            next.Navigate(new Uri("Venek.xaml", UriKind.Relative));
+            if (pozice == 1)
+            {
+                NavigationService.Navigate(new Venek("vnitrek"));
+            } else if (pozice == 2)
+            {
+                NavigationService.Navigate(new Venek("hospoda"));
+            } else if (pozice == 3)
+            {
+                NavigationService.Navigate(new Venek("zahrada"));
+            }
         }
     }
 }

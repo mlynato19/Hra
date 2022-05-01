@@ -23,12 +23,31 @@ namespace Hra
     {
         public int kleft = 0;
         public int ktop = 0;
-
+        
         
 
-        public Venek()
+        public Venek(string odkud)
         {
             InitializeComponent();
+            if (odkud == "vnitrek")
+            {
+                rac.Margin = new Thickness(-660, -90, 0, 0);
+                kleft = -660;
+                ktop = -90;
+                // -660 -90
+            } else if (odkud == "hospoda")
+            {
+                rac.Margin = new Thickness(580, 10, 0, 0);
+                kleft = 580;
+                ktop = -10;
+                // -660 -90
+            } else if (odkud == "zahrada")
+            {
+                rac.Margin = new Thickness(-410, -90, 0, 0);
+                kleft = -410;
+                ktop = -90;
+                // -660 -90
+            }
 
         }
 
@@ -39,7 +58,6 @@ namespace Hra
 
         private void Press(object sender, KeyEventArgs e)
         {
-            Location location = new Location();
             Cont.Content = kleft;
             Cont2.Content = ktop;
 
@@ -101,8 +119,7 @@ namespace Hra
 
             if (ktop <= -180 && kleft >= -460 && kleft <= -350)
             {
-                NavigationService next = NavigationService.GetNavigationService(this);
-                next.Navigate(new Uri("Zahrada.xaml", UriKind.Relative));
+                NavigationService.Navigate(new Poloha2("zahrada"));
             }
 
             if (ktop <= -180 && kleft >= -180 && kleft <= -90)
