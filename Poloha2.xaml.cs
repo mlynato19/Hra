@@ -227,7 +227,10 @@ public partial class Poloha2 : Page
 
         public void DetektivS()
         {
-            postavavpravo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/detektiv.png", UriKind.Relative)));
+            postavavpravo.ImageSource = new BitmapImage(new Uri(@"./photos/detektiv.png", UriKind.Relative));
+
+
+            //postavavpravo.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"/videohra/Hra/photos/detektiv.png", UriKind.Relative)));
         }
 
         public void MrtvolaS()

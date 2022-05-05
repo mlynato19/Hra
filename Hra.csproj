@@ -29,7 +29,9 @@
 
   <ItemGroup>
     <Resource Include="bite.jfif" />
-    <Resource Include="detektiv.png" />
+    <Resource Include="detektiv.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="interior.jpg" />
     <Resource Include="keys.png" />
     <Resource Include="library1.jpg" />
