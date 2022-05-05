@@ -8,11 +8,13 @@
 
   <ItemGroup>
     <None Remove="bite.jfif" />
+    <None Remove="detektiv.png" />
     <None Remove="interior.jpg" />
     <None Remove="keys.png" />
     <None Remove="library1.jpg" />
     <None Remove="main.jpg" />
     <None Remove="mrtvola.png" />
+    <None Remove="old.jpg" />
     <None Remove="out.jpg" />
     <None Remove="pub.jpg" />
     <None Remove="pub1.jpg" />
@@ -27,11 +29,13 @@
 
   <ItemGroup>
     <Resource Include="bite.jfif" />
+    <Resource Include="detektiv.png" />
     <Resource Include="interior.jpg" />
     <Resource Include="keys.png" />
     <Resource Include="library1.jpg" />
     <Resource Include="main.jpg" />
     <Resource Include="mrtvola.png" />
+    <Resource Include="old.jpg" />
     <Resource Include="out.jpg" />
     <Resource Include="pub.jpg" />
     <Resource Include="pub1.jpg" />

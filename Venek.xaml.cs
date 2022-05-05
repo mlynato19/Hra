@@ -124,12 +124,12 @@ namespace Hra
 
             if (ktop <= -180 && kleft >= -180 && kleft <= -90)
             {
-                MessageBox.Show("b");
+                MessageBox.Show("left");
             }
 
             if (ktop <= -180 && kleft >= 70 && kleft <= 170)
             {
-                MessageBox.Show("c");
+                MessageBox.Show("right");
             }
 
             
@@ -142,12 +142,13 @@ namespace Hra
 
             if (ktop >= 110 && kleft >= -520 && kleft <= -350)
             {
-                MessageBox.Show("f");
+                NavigationService.Navigate(new Poloha2("dum3"));
             }
 
             if (ktop >= 110 && kleft >= -720 && kleft <= -610)
             {
-                MessageBox.Show("f");
+                NavigationService next = NavigationService.GetNavigationService(this);
+                next.Navigate(new Uri("Hledacka.xaml", UriKind.Relative));
             }
         }
 
