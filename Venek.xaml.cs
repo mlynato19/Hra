@@ -34,19 +34,48 @@ namespace Hra
                 rac.Margin = new Thickness(-660, -90, 0, 0);
                 kleft = -660;
                 ktop = -90;
-                // -660 -90
-            } else if (odkud == "hospoda")
-            {
-                rac.Margin = new Thickness(580, 10, 0, 0);
-                kleft = 580;
-                ktop = -10;
-                // -660 -90
-            } else if (odkud == "zahrada")
+            }
+            else if (odkud == "zahrada")
             {
                 rac.Margin = new Thickness(-410, -90, 0, 0);
                 kleft = -410;
                 ktop = -90;
-                // -660 -90
+            }
+            else if (odkud == "hospoda")
+            {
+                rac.Margin = new Thickness(580, 10, 0, 0);
+                kleft = 580;
+                ktop = -10;
+            }
+            else if (odkud == "marie")
+            {
+                rac.Margin = new Thickness(-410, 100, 0, 0);
+                kleft = -410;
+                ktop = 100;
+            }
+            else if (odkud == "viktorie")
+            {
+                rac.Margin = new Thickness(-150, -90, 0, 0);
+                kleft = -150;
+                ktop = -90;
+            }
+            else if (odkud == "vojtech")
+            {
+                rac.Margin = new Thickness(130, -90, 0, 0);
+                kleft = 130;
+                ktop = -90;
+            }
+            else if (odkud == "detektivna")
+            {
+                rac.Margin = new Thickness(-70, 100, 0, 0);
+                kleft = -70;
+                ktop = 100;
+            }
+            else if (odkud == "dum")
+            {
+                rac.Margin = new Thickness(-660, 100, 0, 0);
+                kleft = -660;
+                ktop = 100;
             }
 
         }
@@ -58,8 +87,8 @@ namespace Hra
 
         private void Press(object sender, KeyEventArgs e)
         {
-            Cont.Content = kleft;
-            Cont2.Content = ktop;
+            //Cont.Content = kleft;
+            //Cont2.Content = ktop;
 
             if (kleft <= -750)
             {
@@ -124,15 +153,14 @@ namespace Hra
 
             if (ktop <= -180 && kleft >= -180 && kleft <= -90)
             {
-                MessageBox.Show("left");
+                NavigationService.Navigate(new Poloha2("viktorie"));
             }
 
             if (ktop <= -180 && kleft >= 70 && kleft <= 170)
             {
-                MessageBox.Show("right");
+                NavigationService.Navigate(new Poloha2("vojtech"));
             }
 
-            
 
             if (ktop <= -80 && kleft >= 410 && kleft <= 720)
             {
@@ -140,9 +168,14 @@ namespace Hra
                 NavigationService.Navigate(new Poloha2("hospoda"));
             }
 
+            if (ktop >= 110 && kleft >= -170 && kleft <= 70)
+            {
+                NavigationService.Navigate(new Poloha2("detektivna"));
+            }
+
             if (ktop >= 110 && kleft >= -520 && kleft <= -350)
             {
-                NavigationService.Navigate(new Poloha2("dum3"));
+                NavigationService.Navigate(new Poloha2("marie"));
             }
 
             if (ktop >= 110 && kleft >= -720 && kleft <= -610)

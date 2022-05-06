@@ -29,7 +29,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Image Grid.Column="2" Grid.RowSpan="4"
+        <Image x:Name="detektiv" Grid.Column="2" Grid.RowSpan="4"
                HorizontalAlignment="Right" VerticalAlignment="Top"
                Height="427" Width="241" Margin="0,23,43,0" Grid.ColumnSpan="2" Source="/detektiv.png"  />
 
@@ -38,7 +38,7 @@
                    Margin="43,80,0,0" 
                    TextAlignment="Center"
                    Background="Black" Foreground="#FFC7A800"
-                   TextWrapping="Wrap"  
+                   TextWrapping="WrapWithOverflow"  
                    Height="20" Width="118"/>
 
         <TextBlock x:Name="textbox" Grid.Row="2" 
@@ -47,6 +47,129 @@
                    HorizontalAlignment="Left"  VerticalAlignment="Top" 
                    Background="#7C000000" Foreground="White" 
                    Height="125" Width="714" Margin="43,100,0,0" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
+
+        <Button x:Name="dal" Content="Dále" 
+                Grid.Column="3" Grid.Row="3"
+                HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Margin="111,78,0,0"  
+                FontSize="15" FontFamily="Baskerville Old Face"
+                Background="Black" Foreground="#FFC7A800"
+                Height="25" Width="46" Click="dal_Click" />
+
+        <Label x:Name="find" Content="K nalezení:" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Foreground="White"
+               FontFamily="Baskerville Old Face"
+               Margin="50,105,0,0" Grid.Row="2" Grid.RowSpan="2" />
+        <Label x:Name="nuz" Content="Nůž" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Foreground="White"
+               FontFamily="Baskerville Old Face"
+               Margin="98,22,0,0" Grid.Row="3" />
+        <Label x:Name="pantofle" Content="Pantofle" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Foreground="White"
+               FontFamily="Baskerville Old Face"
+               Margin="89,50,0,0" Grid.Row="3" />
+        <Label x:Name="lahev" Content="Lahev" 
+               HorizontalAlignment="Center" VerticalAlignment="Top"
+               Foreground="White"
+               FontFamily="Baskerville Old Face"
+               Margin="0,22,0,0" Grid.Row="3" Grid.Column="1" />
+        <Label x:Name="nemcina" Content="Učebnice Němčiny Super! 1" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Foreground="White"
+               FontFamily="Baskerville Old Face"
+               Margin="26,50,0,0" Grid.Row="3" Grid.Column="1" />
+        <Label x:Name="ponozka" Content="Ponožka" 
+               HorizontalAlignment="Center" VerticalAlignment="Top"
+               Foreground="White"
+               FontFamily="Baskerville Old Face"
+               Margin="0,22,0,0" Grid.Row="3" Grid.Column="2" />
+        <Label x:Name="blahaj" Content="Plyšový žralok Blahaj" 
+               HorizontalAlignment="Center" VerticalAlignment="Top"
+               Foreground="White"
+               FontFamily="Baskerville Old Face"
+               Margin="0,50,0,0" Grid.Row="3" Grid.Column="2" />
+        <Label x:Name="postavicka" Content="Anime postavička" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Foreground="White"
+               FontFamily="Baskerville Old Face"
+               Margin="20,22,0,0" Grid.Row="3" Grid.Column="3" />
+        <Label x:Name="ketamin" Content="Ketamin" 
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Foreground="White"
+               FontFamily="Baskerville Old Face"
+               Margin="34,50,0,0" Grid.Row="3" Grid.Column="3" />
+
+        <Image x:Name="nuzimg" 
+               Source="/photos/nuz.png" 
+               MouseDown="nuzimg_MouseDown" Cursor="Hand"
+               Margin="174,72,149,97" Grid.RowSpan="2" 
+               Grid.ColumnSpan="2" Grid.Row="2" 
+               RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="4.793"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="pantofleimg" 
+               Source="/photos/pantofle.png" 
+               MouseDown="pantofleimg_MouseDown"  Cursor="Hand"
+               Margin="71,32,196,108" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+        <Image x:Name="lahevimg" 
+               Source="/lahev.png" 
+               MouseDown="lahevimg_MouseDown"  Cursor="Hand"
+               Margin="17,94,72,56" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" />
+        <Image x:Name="nemcinaimg" 
+               Source="/photos/super.jpg" 
+               MouseDown="nemcinaimg_MouseDown"  Cursor="Hand"
+               Margin="98,-7,-9,46" Grid.Column="3" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-65.948"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="ponozkaimg" 
+               Source="/photos/sock.png" 
+               MouseDown="ponozkaimg_MouseDown"  Cursor="Hand"
+               Margin="-23,26,136,25" Grid.Row="1" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-50.398"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="blahajimg" 
+               Source="/photos/blahaj.png" 
+               MouseDown="blahajimg_MouseDown"  Cursor="Hand"
+               Margin="198,78,53,40" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+        <Image x:Name="animeimg" 
+               Source="/photos/anime.png" 
+               MouseDown="animeimg_MouseDown"  Cursor="Hand"
+               Margin="65,2,25,38" Grid.Row="2" />
+        <Image x:Name="ketaminimg" 
+               Source="/photos/ketamin.png" 
+               MouseDown="ketaminimg_MouseDown"  Cursor="Hand"
+               Margin="114,67,114,51" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+
+        <Button x:Name="getout" Content="Odejít ven" 
+            Grid.Column="1"
+            HorizontalAlignment="Left" VerticalAlignment="Top"  
+            FontSize="15" FontFamily="Baskerville Old Face"
+            Background="Black" Foreground="#FFC7A800"
+            Height="36" Width="89" Click="getout_Click"  Grid.ColumnSpan="2" Margin="154,0,0,0" />
 
     </Grid>
 </Page>
