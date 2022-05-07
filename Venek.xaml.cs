@@ -23,12 +23,15 @@ namespace Hra
     {
         public int kleft = 0;
         public int ktop = 0;
-        
-        
+        public bool done = Var.Byl;
+
 
         public Venek(string odkud)
         {
             InitializeComponent();
+
+            uzbyl.Visibility = Visibility.Collapsed;
+
             if (odkud == "vnitrek")
             {
                 rac.Margin = new Thickness(-660, -90, 0, 0);
@@ -76,6 +79,12 @@ namespace Hra
                 rac.Margin = new Thickness(-660, 100, 0, 0);
                 kleft = -660;
                 ktop = 100;
+                done = true;
+            }
+
+            if (done== true)
+            {
+                uzbyl.Visibility = Visibility.Visible;
             }
 
         }
@@ -180,8 +189,15 @@ namespace Hra
 
             if (ktop >= 110 && kleft >= -720 && kleft <= -610)
             {
-                NavigationService next = NavigationService.GetNavigationService(this);
-                next.Navigate(new Uri("Hledacka.xaml", UriKind.Relative));
+                if (done == true)
+                {
+                    uzbyl.Visibility = Visibility.Visible;
+                } else
+                {
+                    NavigationService next = NavigationService.GetNavigationService(this);
+                    next.Navigate(new Uri("Hledacka.xaml", UriKind.Relative));
+                }
+                
             }
         }
 

@@ -22,7 +22,7 @@
         <Image x:Name="rac"  
                Height="76" Width="75"
                Margin="0,0,0,0"
-               Source="/raccoon-top.png" 
+               Source="/photos/raccoon-top.png" 
                Stretch="Uniform" StretchDirection="Both"/>
 
         <Label Content="Hospoda" 
@@ -101,6 +101,19 @@
                Height="39" Width="111">
             <TextBlock TextWrapping="WrapWithOverflow">
                 Pro pohyb postavy použijte šipky
+            </TextBlock>
+        </Label>
+
+
+        <Label x:Name="uzbyl"
+            HorizontalContentAlignment="Center" 
+            HorizontalAlignment="Left"  VerticalAlignment="Top"
+            Margin="24,207,0,0" 
+            Background="#B2000000" Foreground="White"
+            FontFamily="Baskerville Old Face"  
+            Height="64" Width="105">
+            <TextBlock TextWrapping="WrapWithOverflow">
+                Tady jsem už byl. Měl bych jít vyslechnout svědky a podezřelé.
             </TextBlock>
         </Label>
 

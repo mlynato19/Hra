@@ -24,8 +24,7 @@ namespace Hra
     
 public partial class Poloha2 : Page
     {
-        //public int location = 1;
-
+        
         public List<Slova> jsonFromFile;
         public List<Slova> jsonFromFileB;
         public List<Slova> jsonFromFileC;

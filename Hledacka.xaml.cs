@@ -21,6 +21,8 @@ namespace Hra
     public partial class Hledacka : Page
     {
         public int i = 0;
+        public bool done = Var.Byl;
+        
         public Hledacka()
         {
             InitializeComponent();
@@ -43,16 +45,8 @@ namespace Hra
             blahajimg.Visibility = Visibility.Collapsed;
             animeimg.Visibility = Visibility.Collapsed;
             ketaminimg.Visibility = Visibility.Collapsed;
+            getout.Visibility = Visibility.Collapsed;
 
-            if (nuz.Content == null)
-            {
-                MessageBox.Show("sex");
-            }
-
-            if (i == 7)
-            {
-                MessageBox.Show("sex");
-            }
 
 
         }
@@ -88,7 +82,7 @@ namespace Hra
                 detektiv.Visibility = Visibility.Visible;
                 jmenovka.Visibility = Visibility.Visible;
                 find.Visibility = Visibility.Collapsed;
-
+                getout.Visibility = Visibility.Visible;
                 textbox.Text = "Tenhle nůž je skoro určitě vražedná zbraň! Přesně takhle velké bodné rany v sobě má oběť. Hmmm... Nůž byl dobře očištěn, otisky žádné. Na noži jsou ale vyrité iniciály jména. Iniciála jména na noži začíná na V, jméno vraha tedy praděpodobně taky. Měl bych pozorně vyslechnout všechny podezřelé se jménem začínajícím na V.";
             }
         }
@@ -161,6 +155,7 @@ namespace Hra
 
         private void getout_Click(object sender, RoutedEventArgs e)
         {
+            done = true;
             NavigationService.Navigate(new Venek("dum"));
         }
     }
