@@ -1,30 +1,26 @@
 [
   {
-    "Text": "Dobrı den, jsem místní detektiv. Øeším vradu pana Kocoura, nevím jestli ho znáte, ale bydlel zde hned vedle tohoto domu. Mohl bych Vás vyslechnout?",
+    "Text": "DobrÃ½ den, jsem mÃ­stnÃ­ detektiv. Å˜eÅ¡Ã­m vraÅ¾du pana Kocoura, nevÃ­m jestli ho znÃ¡te, ale bydlel zde hned vedle tohoto domu. Mohl bych VÃ¡s vyslechnout?",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "Pan Kocour zemøel? Chudák, ten si to nezaslouil... S vıslechem problém nemám, povídejte.",
-    "Jmenovka": "Zahradník"
+    "Text": "Pan Kocour zemÅ™el? ChudÃ¡k, ten si to nezaslouÅ¾il... S vÃ½slechem problÃ©m nemÃ¡m, povÃ­dejte.",
+    "Jmenovka": "ZahradnÃ­k"
   },
   {
-    "Text": "Mám zapsané jako podezøelé pana Vojtìcha, paní Viktorii a paní Marii. Myslíte, e je moné, e to nìkdo z nich provedl?",
+    "Text": "MÃ¡m zapsanÃ© jako podezÅ™elÃ© pana VojtÄ›cha, panÃ­ Viktorii a panÃ­ Marii. MyslÃ­te, Å¾e je moÅ¾nÃ©, Å¾e to nÄ›kdo z nich provedl?",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "Mùu jen potvrdit, e ho urèitì nikdo z nich nemìl zrovna v oblibì. Podle mì pan Vojtìch není schopnı vrady, je to sice nepøíjemnej dìdek, ale nic takovıho by neudìlal.",
-    "Jmenovka": "Zahradník"
+    "Text": "MÅ¯Å¾u jen potvrdit, Å¾e ho urÄitÄ› nikdo z nich nemÄ›l zrovna v oblibÄ›. Podle mÄ› pan VojtÄ›ch nenÃ­ schopnÃ½ vraÅ¾dy, je to sice nepÅ™Ã­jemnej blÃ¡zen, ale nic takovÃ½ho by neudÄ›lal.",
+    "Jmenovka": "ZahradnÃ­k"
   },
   {
-    "Text": "Mockrát dìkuju. Nashle.",
+    "Text": "MockrÃ¡t dÄ›kuju. Nashle.",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "Nashledanou, a hodnì štìstí s pøípadem.",
-    "Jmenovka": "Zahradník"
-  },
-  {
-    "Text": "",
-    "Jmenovka": ""
+    "Text": "Nashledanou, a hodnÄ› Å¡tÄ›stÃ­ s pÅ™Ã­padem.",
+    "Jmenovka": "ZahradnÃ­k"
   }
 ]

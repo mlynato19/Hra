@@ -15,6 +15,8 @@ using System.Text.Json;
 using System.Windows.Navigation;
 using Newtonsoft.Json;
 using System.IO;
+using System.Text.Unicode;
+using System.Text.Encodings.Web;
 
 namespace Hra
 {
@@ -176,8 +178,7 @@ public partial class Poloha2 : Page
                 } 
                 else if (i >= 5)
                 {
-                    getout.Visibility = Visibility.Visible;
-                    i--;
+                    Endtext();
                 }
 
             }
@@ -187,8 +188,7 @@ public partial class Poloha2 : Page
                 jmenovka.Text = jsonFromFileC[i].Jmenovka;
                 if (i >= 5)
                 {
-                    getout.Visibility = Visibility.Visible;
-                    i--;
+                    Endtext();
                 }
                 
             }
@@ -196,25 +196,39 @@ public partial class Poloha2 : Page
             {
                 textbox.Text = jsonFromFileD[i].Text;
                 jmenovka.Text = jsonFromFileD[i].Jmenovka;
-                
+                if (i >= 9)
+                {
+                    Endtext();
+                }
+
             }
             else if (pozice == 4)
             {
                 textbox.Text = jsonFromFileE[i].Text;
                 jmenovka.Text = jsonFromFileE[i].Jmenovka;
+                if (i >= 7)
+                {
+                    Endtext();
+                }
 
             }
             else if (pozice == 5)
             {
                 textbox.Text = jsonFromFileF[i].Text;
                 jmenovka.Text = jsonFromFileF[i].Jmenovka;
-
+                if (i >= 10)
+                {
+                    Endtext();
+                }
             }
             else if (pozice == 6)
             {
                 textbox.Text = jsonFromFileG[i].Text;
                 jmenovka.Text = jsonFromFileG[i].Jmenovka;
-
+                if (i >= 10)
+                {
+                    Endtext();
+                }
             }
             else if (pozice is 7 or 8)
             {
@@ -222,6 +236,12 @@ public partial class Poloha2 : Page
                 Optionbox();
             }
 
+        }
+
+        public void Endtext()
+        {
+            getout.Visibility = Visibility.Visible;
+            i--;
         }
 
         public void Hidoption()

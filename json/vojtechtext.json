@@ -1,30 +1,46 @@
 [
   {
-    "Text": "text1",
+    "Text": "...když vydělím číslo nulou, mělo by to být nekonečno...mmmm ženy z Prachatic...budu vždycky chodit pozdě, protože těch pět minut spánku navíc mi za to stojí...",
+    "Jmenovka": "Vojtěch"
+  },
+  {
+    "Text": "Přeji pěkný den pane Vojtěchu, pro koho to tady mluvíte?",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "pokracovani...",
+    "Text": "Hm? Jenom si povídám pro sebe. Kdo jste a co chcete?",
+    "Jmenovka": "Vojtěch"
+  },
+  {
+    "Text": "Jsem místní detektiv a jsem pověřen vyšetřením vraždy pana Kocoura. Mohu se Vás zeptat na pár otázek?",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "text2",
-    "Jmenovka": "Zahradnik"
+    "Text": "Ten dědek byl otravnej, ale smrt si nezasloužil. Ptejte se.",
+    "Jmenovka": "Vojtěch"
   },
   {
-    "Text": "text3",
+    "Text": "Díky. Kde jste byl včera kolem deváté večer?",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "text4",
-    "Jmenovka": "Zahradnik"
+    "Text": "Tady doma, opravoval jsem svoje auto.",
+    "Jmenovka": "Vojtěch"
   },
   {
-    "Text": "text5",
+    "Text": "Může Vám to někdo potvrdit?",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "text6",
-    "Jmenovka": "Zahradnik"
+    "Text": "Bohužel ne.",
+    "Jmenovka": "Vojtěch"
+  },
+  {
+    "Text": "Dobře, děkuji. Nashledanou.",
+    "Jmenovka": "Detektiv"
+  },
+  {
+    "Text": "Nashledanou.",
+    "Jmenovka": "Vojtěch"
   }
 ]

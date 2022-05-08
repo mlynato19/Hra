@@ -74,10 +74,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="json\hospodatext.json">
+    <Content Include="json\introtext.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="json\introtext.json">
+    <Content Include="json\hospodatext.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="json\marietext.json">
@@ -86,13 +86,13 @@
     <Content Include="json\viktorietext.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="json\vnitrektext.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="json\vojtechtext.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="json\zahradatext.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="json\vnitrektext.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="photos\anime.png">

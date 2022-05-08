@@ -1,30 +1,46 @@
 [
   {
-    "Text": "text1",
+    "Text": "Dobrý den paní Viktorie. Byl jsem pověřen vyšetřením vraždy pana Kocoura. Mohu se Vás zeptat na nějaké otázky?",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "pokracovani...",
+    "Text": "Nevím o čem to mluvíte. Naznačujete snad, že jsem ho zavraždila?",
+    "Jmenovka": "Viktorie"
+  },
+  {
+    "Text": "To jsem neřekl, ale jste momentálně podezřelá. Buďte v klidu, pokud jste vraždu nezpůsobila, nemáte se čeho bát.",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "text2",
-    "Jmenovka": "Zahradnik"
+    "Text": "Jak myslíte. Ale já to nebyla.",
+    "Jmenovka": "Viktorie"
   },
   {
-    "Text": "text3",
+    "Text": "Hm. Dobře. Jaký vztah jste měla s panem Kocourem?",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "text4",
-    "Jmenovka": "Zahradnik"
+    "Text": "Nemám ho ráda. Půjčila jsem si od něj peníze, které jsem mu samozřejmě plánovala vrátit, ale neuběhl ani rok a začal naléhal abych mu je vrátila co nejdříve, přestože jsme byli domluvení, že mu je vrátím do dvou let.",
+    "Jmenovka": "Viktorie"
   },
   {
-    "Text": "text5",
+    "Text": "Kde jste byla včera kolem deváté večer?",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "text6",
-    "Jmenovka": "Zahradnik"
+    "Text": "Kde bych asi tak byla? Byla jsem celý večer u sebe doma.",
+    "Jmenovka": "Viktorie"
+  },
+  {
+    "Text": "Máte někoho kdo by Vám to mohl potvrdit?",
+    "Jmenovka": "Detektiv"
+  },
+  {
+    "Text": "Máte moje slovo. A už odejděte, nemáte důkazy a jste příliš dotěrný.",
+    "Jmenovka": "Viktorie"
+  },
+  {
+    "Text": "Jak chcete, stejně jsem slyšel dost. Nashle.",
+    "Jmenovka": "Detektiv"
   }
 ]
