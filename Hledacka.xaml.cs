@@ -21,7 +21,6 @@ namespace Hra
     public partial class Hledacka : Page
     {
         public int i = 0;
-        public bool done = Var.Byl;
         
         public Hledacka()
         {
@@ -155,8 +154,8 @@ namespace Hra
 
         private void getout_Click(object sender, RoutedEventArgs e)
         {
-            done = true;
             NavigationService.Navigate(new Venek("dum"));
+
         }
     }
 }

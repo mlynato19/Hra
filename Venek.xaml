@@ -117,6 +117,18 @@
             </TextBlock>
         </Label>
 
+        <Label x:Name="uzbyl2"
+            HorizontalContentAlignment="Center" 
+            HorizontalAlignment="Left"  VerticalAlignment="Top"
+            Margin="24,40,0,0" 
+            Background="#B2000000" Foreground="White"
+            FontFamily="Baskerville Old Face"  
+            Height="53" Width="105">
+            <TextBlock TextWrapping="WrapWithOverflow">
+                Tady jsem už byl. Nic dalšího tu nenajdu.
+            </TextBlock>
+        </Label>
+
 
 
 

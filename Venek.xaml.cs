@@ -23,20 +23,22 @@ namespace Hra
     {
         public int kleft = 0;
         public int ktop = 0;
-        public bool done = Var.Byl;
-
+        public bool done;
+        public bool done2;
 
         public Venek(string odkud)
         {
             InitializeComponent();
 
             uzbyl.Visibility = Visibility.Collapsed;
+            uzbyl2.Visibility = Visibility.Collapsed;
 
             if (odkud == "vnitrek")
             {
                 rac.Margin = new Thickness(-660, -90, 0, 0);
                 kleft = -660;
                 ktop = -90;
+                done2 = true;
             }
             else if (odkud == "zahrada")
             {
@@ -73,6 +75,7 @@ namespace Hra
                 rac.Margin = new Thickness(-70, 100, 0, 0);
                 kleft = -70;
                 ktop = 100;
+                
             }
             else if (odkud == "dum")
             {
@@ -82,10 +85,7 @@ namespace Hra
                 done = true;
             }
 
-            if (done== true)
-            {
-                uzbyl.Visibility = Visibility.Visible;
-            }
+           
 
         }
 
@@ -150,10 +150,14 @@ namespace Hra
 
             if (ktop <= -180 && kleft >= -720 && kleft <= -610)
             {
-                NavigationService.Navigate(new Poloha2("vnitrek"));
-                //NavigationService next = NavigationService.GetNavigationService(this);
-                //next.Navigate(new Uri("Poloha2.xaml", UriKind.Relative));
+                uzbyl2.Visibility = Visibility.Visible;
+
             }
+            else
+            {
+                uzbyl2.Visibility = Visibility.Collapsed;
+            }
+
 
             if (ktop <= -180 && kleft >= -460 && kleft <= -350)
             {
@@ -192,12 +196,17 @@ namespace Hra
                 if (done == true)
                 {
                     uzbyl.Visibility = Visibility.Visible;
-                } else
+                } 
+                else
                 {
                     NavigationService next = NavigationService.GetNavigationService(this);
                     next.Navigate(new Uri("Hledacka.xaml", UriKind.Relative));
                 }
                 
+            } 
+            else
+            {
+                uzbyl.Visibility = Visibility.Collapsed;
             }
         }
 

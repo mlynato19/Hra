@@ -1,30 +1,30 @@
 [
   {
-    "Text": "text1",
+    "Text": "Dobrý den, jsem místní detektiv. Øeším vraždu pana Kocoura, nevím jestli ho znáte, ale bydlel zde hned vedle tohoto domu. Mohl bych Vás vyslechnout?",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "pokracovani...",
+    "Text": "Pan Kocour zemøel? Chudák, ten si to nezasloužil... S výslechem problém nemám, povídejte.",
+    "Jmenovka": "Zahradník"
+  },
+  {
+    "Text": "Mám zapsané jako podezøelé pana Vojtìcha, paní Viktorii a paní Marii. Myslíte, že je možné, že to nìkdo z nich provedl?",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "text2",
-    "Jmenovka": "Zahradnik"
+    "Text": "Mùžu jen potvrdit, že ho urèitì nikdo z nich nemìl zrovna v oblibì. Podle mì pan Vojtìch není schopný vraždy, je to sice nepøíjemnej dìdek, ale nic takovýho by neudìlal.",
+    "Jmenovka": "Zahradník"
   },
   {
-    "Text": "text3",
+    "Text": "Mockrát dìkuju. Nashle.",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "text4",
-    "Jmenovka": "Zahradnik"
+    "Text": "Nashledanou, a hodnì štìstí s pøípadem.",
+    "Jmenovka": "Zahradník"
   },
   {
-    "Text": "text5",
-    "Jmenovka": "Detektiv"
-  },
-  {
-    "Text": "text6",
-    "Jmenovka": "Zahradnik"
+    "Text": "",
+    "Jmenovka": ""
   }
 ]

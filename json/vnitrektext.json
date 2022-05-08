@@ -1,0 +1,30 @@
+[
+  {
+    "Text": "Dobrý den. Jsem místní detektiv. Bylo by v pořádku, kdybych Vás nyní vyslechl?",
+    "Jmenovka": "Detektiv"
+  },
+  {
+    "Text": "Snad ano. Jsem trochu otřesen ale udělám cokoliv, aby se našel vrah a byl zatčen.",
+    "Jmenovka": "Syn"
+  },
+  {
+    "Text": "Dobře, díky.",
+    "Jmenovka": "Detektiv"
+  },
+  {
+    "Text": "",
+    "Jmenovka": ""
+  },
+  {
+    "Text": "Mockrát děkuju. Půjdu všechny vyslechnout. Nashledanou.",
+    "Jmenovka": "Policista"
+  },
+  {
+    "Text": "Nashledanou.",
+    "Jmenovka": "Syn"
+  },
+  {
+    "Text": "",
+    "Jmenovka": ""
+  }
+]

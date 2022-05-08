@@ -17,6 +17,7 @@
     <None Remove="json\textb.json" />
     <None Remove="json\vikrorietext.json" />
     <None Remove="json\viktorietext.json" />
+    <None Remove="json\vnitrektext.json" />
     <None Remove="json\vojtech.json" />
     <None Remove="json\vojtechtext.json" />
     <None Remove="json\zahradatext.json" />
@@ -31,16 +32,22 @@
     <None Remove="pantofle.png" />
     <None Remove="photos\anime.png" />
     <None Remove="photos\blahaj.png" />
+    <None Remove="photos\child.png" />
     <None Remove="photos\cisnik.png" />
     <None Remove="photos\detektiv.png" />
     <None Remove="photos\detektivna.jpg" />
     <None Remove="photos\dum.jpg" />
+    <None Remove="photos\dum_marie.jpg" />
+    <None Remove="photos\dum_viktorie.jpg" />
+    <None Remove="photos\gardener.png" />
     <None Remove="photos\interior.jpg" />
+    <None Remove="photos\jail.jpg" />
     <None Remove="photos\ketamin.png" />
     <None Remove="photos\keys.png" />
     <None Remove="photos\lahev.png" />
     <None Remove="photos\library1.jpg" />
     <None Remove="photos\main.jpg" />
+    <None Remove="photos\marie.png" />
     <None Remove="photos\mrtvola.png" />
     <None Remove="photos\nuz.png" />
     <None Remove="photos\old.jpg" />
@@ -54,6 +61,8 @@
     <None Remove="photos\ulice1.jpg" />
     <None Remove="photos\victorian-car.jpg" />
     <None Remove="photos\Victorian-Garden-3.jpg" />
+    <None Remove="photos\viktorie.png" />
+    <None Remove="photos\vojtech.png" />
     <None Remove="policeman.png" />
     <None Remove="pub.jpg" />
     <None Remove="pub1.jpg" />
@@ -77,6 +86,9 @@
     <Content Include="json\viktorietext.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="json\vnitrektext.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="json\vojtechtext.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -89,6 +101,9 @@
     <Content Include="photos\blahaj.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="photos\child.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="photos\cisnik.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -98,10 +113,19 @@
     <Content Include="photos\detektivna.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="photos\dum.jpg">
+    <Content Include="photos\dum_marie.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="photos\dum_viktorie.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="photos\gardener.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="photos\interior.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="photos\jail.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="photos\ketamin.png">
@@ -114,6 +138,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="photos\library1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="photos\marie.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="photos\mrtvola.png">
@@ -150,6 +177,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="photos\Victorian-Garden-3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="photos\viktorie.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="photos\vojtech.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

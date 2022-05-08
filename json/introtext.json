@@ -1,30 +1,34 @@
 [
   {
-    "Text": "prvni text (backstory, co o ni vi,...)",
+    "Text": "Jmenuji se Adam, jsem místní detektiv v malé vesnici na pokraji Anglie. Byl jsem pověřen vyšetřením vraždy pana Kocoura, jeho tělo je stále zde. Každou chvíli by měl přijít policista, který tělo odklidí a řekne mi vše co zjistil.",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "pokracovani...",
+    "Text": "Pan Kocour zde žil odjakživa, a co já vím tak žádné nepřátele nemá. Byl to hodný starší pán s jedním synem. Jeho manželka zemřela před pár lety, takže dům měl se synem pro sebe.",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "(co zjistil.....)",
+    "Text": "Tak jsem tady. Tělo odklizeno. Nějaké dotazy?",
     "Jmenovka": "Policista"
   },
   {
-    "Text": "nic dalšího tu u není..., měl bych jít vyslechnout svědky v domě.",
+    "Text": "Určitě ano. Jak a kdy pan Kocour zemřel?",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "nic dalšího tu u není..., měl bych jít vyslechnout svědky v domě.",
+    "Text": "Pan Kocour byl několikrát bodnut do hrudi nožem. Bylo to včera kolem deváté večer. Ráno ho zde v knihovně našel jeho syn, který teď čeká dole na výslech. Dost možná nebude schopný výpovědi, přeci jen dnes ráno našel svého otce mrtvého ve vlastním domě.",
+    "Jmenovka": "Policista"
+  },
+  {
+    "Text": "Díky. Půjdu ho vyslechnout, snad bude spolupracovat. Nashledanou.",
     "Jmenovka": "Detektiv"
   },
   {
-    "Text": "nic dalšího tu u není..., měl bych jít vyslechnout svědky v domě.",
-    "Jmenovka": "Detektiv"
+    "Text": "Nashle.",
+    "Jmenovka": "Policista"
   },
   {
-    "Text": "nic dalšího tu u není..., měl bych jít vyslechnout svědky v domě.",
-    "Jmenovka": "Detektiv"
+    "Text": "",
+    "Jmenovka": ""
   }
 ]
