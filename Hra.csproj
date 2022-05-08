@@ -211,7 +211,6 @@
     <Resource Include="pub1.jpg" />
     <Resource Include="raccoon-top.png" />
     <Resource Include="sock.png" />
-    <Resource Include="SpringTrapScrappy.png" />
     <Resource Include="super.jpg" />
     <Resource Include="Victorian-Garden-3.jpg" />
   </ItemGroup>

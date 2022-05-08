@@ -322,22 +322,6 @@ public partial class Poloha2 : Page
                 leftButText.Text = "Víme, jak dlouho je mrtvý?";
                 rightButText.Text = "Měl nějaké nepřátele?";
             }
-            else if (pozice == 3)
-            {
-
-            }
-            else if (pozice == 4)
-            {
-
-            }
-            else if (pozice == 5)
-            {
-
-            }
-            else if (pozice == 6)
-            {
-
-            }
             else if (pozice == 7)
             {
                 select.Text = "Obvinit vraha?";
@@ -362,30 +346,6 @@ public partial class Poloha2 : Page
                 textbox.Text = "44.";
 
             }
-            else if (pozice == 2)
-            {
-
-            }
-            else if (pozice == 3)
-            {
-
-            }
-            else if (pozice == 4)
-            {
-
-            }
-            else if (pozice == 5)
-            {
-
-            }
-            else if (pozice == 6)
-            {
-
-            }
-            else if (pozice == 7)
-            {
-
-            }
             else if (pozice == 8)
             {
                 Hidoption();
@@ -404,26 +364,6 @@ public partial class Poloha2 : Page
                 Hidoption();
                 jmenovka.Text = "Syn";
                 textbox.Text = "Nevím o nikom, ale poslední dobou měl neshody s Marií a Viktorií. A ještě je tu Vojtěch, ten tátu neměl nikdy v oblibě.";
-            }
-            else if (pozice == 2)
-            {
-
-            }
-            else if (pozice == 3)
-            {
-
-            }
-            else if (pozice == 4)
-            {
-
-            }
-            else if (pozice == 5)
-            {
-
-            }
-            else if (pozice == 6)
-            {
-
             }
             else if (pozice == 7)
             {
