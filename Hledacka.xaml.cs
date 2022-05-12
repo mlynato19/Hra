@@ -20,7 +20,6 @@ namespace Hra
     /// </summary>
     public partial class Hledacka : Page
     {
-        public int i = 0;
         
         public Hledacka()
         {

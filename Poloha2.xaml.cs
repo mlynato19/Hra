@@ -84,7 +84,7 @@ public partial class Poloha2 : Page
                 jmenovka.Text = jsonFromFile[i].Jmenovka;
 
             }
-            if (mistnost == "vnitrek")
+            else if (mistnost == "vnitrek")
             {
                 background.ImageSource = new BitmapImage(new Uri(@"./photos/interior.jpg", UriKind.Relative));
                 textbox.Text = jsonFromFileB[i].Text;
@@ -345,6 +345,11 @@ public partial class Poloha2 : Page
                 jmenovka.Text = "Syn";
                 textbox.Text = "44.";
 
+            }
+            else if (pozice == 7)
+            {
+                Hidoption();
+                getout.Visibility = Visibility.Visible;
             }
             else if (pozice == 8)
             {
